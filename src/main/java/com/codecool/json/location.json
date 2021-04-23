@@ -1,0 +1,102 @@
+[
+  {
+    "id": "0fe479bb-fe39-4265-b59f-bb4ac5a060d4",
+    "manager_name": "Cicely Bister",
+    "phone": "341-939-9617",
+    "address_primary": "889 Old Shore Pass",
+    "address_secondary": null,
+    "country": "Czech Republic",
+    "town": "Týn nad Vltavou",
+    "postal_code": "375 01"
+  },
+  {
+    "id": "ac867cd8-c321-42ab-b179-01a4b8301a9c",
+    "manager_name": "Rodina Matterdace",
+    "phone": "223-158-6560",
+    "address_primary": "22196 Lunder Drive",
+    "address_secondary": null,
+    "country": "Colombia",
+    "town": "Concepción",
+    "postal_code": "053817"
+  },
+  {
+    "id": "bfcd9dc2-3ead-470b-9846-5a3f6d8f32a1",
+    "manager_name": "Luci Pechet",
+    "phone": "838-658-5946",
+    "address_primary": "80 Larry Circle",
+    "address_secondary": null,
+    "country": "Indonesia",
+    "town": "Banjar Bali",
+    "postal_code": null
+  },
+  {
+    "id": "5ae22efb-f875-4134-a03d-6402efa31dc5",
+    "manager_name": "Ardella Onyon",
+    "phone": "432-852-3249",
+    "address_primary": "17883 Valley Edge Trail",
+    "address_secondary": null,
+    "country": "China",
+    "town": "Datangzhuang",
+    "postal_code": null
+  },
+  {
+    "id": "1d551b07-fd16-4760-88a3-4aa4fda13a2b",
+    "manager_name": "Fletcher Kilcullen",
+    "phone": "893-804-7155",
+    "address_primary": "2055 Havey Alley",
+    "address_secondary": null,
+    "country": "Iran",
+    "town": "Bāft",
+    "postal_code": null
+  },
+  {
+    "id": "52ea143e-cb45-43af-981e-92cedb89f7a8",
+    "manager_name": "Becka Sergeaunt",
+    "phone": "856-698-2890",
+    "address_primary": "89645 Roth Court",
+    "address_secondary": null,
+    "country": "Philippines",
+    "town": "Dolo",
+    "postal_code": "1270"
+  },
+  {
+    "id": "c47ab7b4-3a94-4218-8e0b-4bada1fb05c0",
+    "manager_name": "Winfield Farloe",
+    "phone": "517-280-7191",
+    "address_primary": "66699 Charing Cross Road",
+    "address_secondary": null,
+    "country": "Portugal",
+    "town": "Foz Sousa",
+    "postal_code": "4515-093"
+  },
+  {
+    "id": "5c3a4cf8-1ac4-456d-ba85-a782ff475256",
+    "manager_name": "Nolly Face",
+    "phone": "875-296-2830",
+    "address_primary": "1 Autumn Leaf Plaza",
+    "address_secondary": null,
+    "country": "China",
+    "town": "Rongmei",
+    "postal_code": null
+  },
+  {
+    "id": "013cc380-c18b-4c87-8043-16e14f7127de",
+    "manager_name": "Janis Owens",
+    "phone": "346-962-4042",
+    "address_primary": "715 Ridgeview Crossing",
+    "address_secondary": null,
+    "country": "Yemen",
+    "town": "Aţ Ţawīlah",
+    "postal_code": null
+  },
+  {
+    "id": "5249f33c-fadf-44d9-ab70-471df29c20a6",
+    "manager_name": "Ciro Ilewicz",
+    "phone": "701-301-3522",
+    "address_primary": "516 Kinsman Street",
+    "address_secondary": null,
+    "country": "Poland",
+    "town": "Dąbie",
+    "postal_code": "62-660"
+  }
+]
