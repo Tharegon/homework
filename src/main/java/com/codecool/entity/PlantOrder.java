@@ -6,6 +6,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 import java.util.UUID;
 
@@ -13,8 +14,11 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
+@Entity
+@Table()
 public class PlantOrder {
 
+    @Id
     private UUID id;
     private String title;
     private String description;
