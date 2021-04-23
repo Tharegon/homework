@@ -1,7 +1,12 @@
 package com.codecool;
 
+import com.codecool.dao.PlantOrderDao;
+import com.codecool.entity.PlantOrder;
+
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class Controller {
 
@@ -36,8 +41,11 @@ public class Controller {
                 view.showReports();
                 break;
             case "database":
-                view.printList(service.generatePOJO());
-                break;
+                List<PlantOrder> orders = service.generatePOJO();
+                PlantOrderDao dao = new PlantOrderDao();
+                orders.forEach(s -> dao.saveOrder(s));
+                view.printList(dao.getOrders());
+                readCommand(readLine());
             case "exit":
                 break;
             default:
