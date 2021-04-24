@@ -20,10 +20,10 @@ public class View {
         System.out.println("3.option");
     }
 
-    public void printList(List<PlantOrder> POJO) {
-        for (PlantOrder order: POJO
+    public void printList(List<Object> POJO) {
+        for (Object item: POJO
              ) {
-            System.out.println(order);
+            System.out.println(item);
         }
     }
 }
