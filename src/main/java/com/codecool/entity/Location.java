@@ -4,14 +4,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.UUID;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
+@Table()
 @Entity
 public class Location {
 
@@ -23,6 +27,8 @@ public class Location {
     private String addressSecondary;
     private String country;
     private String town;
+    private String postalCode;
+
 
     public Location(@JsonProperty("id") UUID id,
                     @JsonProperty("manager_name") String managerName,
@@ -42,6 +48,5 @@ public class Location {
         this.postalCode = postalCode;
     }
 
-    private String postalCode;
 
 }
