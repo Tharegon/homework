@@ -1,6 +1,8 @@
 package com.codecool;
 
+import com.codecool.dao.LocationDao;
 import com.codecool.dao.PlantOrderDao;
+import com.codecool.entity.Location;
 import com.codecool.entity.PlantOrder;
 
 import java.util.List;
@@ -41,10 +43,15 @@ public class Controller {
                 view.showReports();
                 break;
             case "database":
-                List<PlantOrder> orders = service.generatePOJO();
-                PlantOrderDao dao = new PlantOrderDao();
-                orders.forEach(s -> dao.saveOrder(s));
-                view.printList(dao.getOrders());
+                List<PlantOrder> orders = service.generatePlantOrderPOJO();
+                List<Location> locations = service.generateLocationPOJO();
+
+                PlantOrderDao plantOrderDao = new PlantOrderDao();
+                LocationDao locationDao = new LocationDao();
+
+                orders.forEach(s -> plantOrderDao.saveOrder(s));
+                locations.forEach(x -> locationDao.saveLocation(x));
+
                 readCommand(readLine());
             case "exit":
                 break;
