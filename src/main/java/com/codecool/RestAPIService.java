@@ -2,6 +2,7 @@ package com.codecool;
 
 
 
+import com.codecool.entity.Location;
 import com.codecool.entity.PlantOrder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -24,7 +25,7 @@ import java.util.List;
 
 public class RestAPIService {
 
-    public List<PlantOrder> generatePOJO() throws Exception{
+    public List<PlantOrder> generatePlantOrderPOJO() throws Exception{
 
 
             /*HttpGet request = new HttpGet("https://my.api.mockaroo.com/listing?key=63304c70");
@@ -37,10 +38,15 @@ public class RestAPIService {
             InputStream input = new FileInputStream("src/main/java/com/codecool/json/order.json");
 
             //PlantOrder plantOrder = objectMapper.readValue(input, PlantOrder.class);
-            List<PlantOrder> plantOrder = objectMapper.readValue(input, new TypeReference<List<PlantOrder>>() {
-            });
-            //System.out.println(plantOrder);
+            List<PlantOrder> plantOrder = objectMapper.readValue(input, new TypeReference<List<PlantOrder>>() {});
             return plantOrder;
+    }
+
+    public List<Location> generateLocationPOJO() throws Exception{
+        ObjectMapper objectMapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        InputStream input = new FileInputStream("src/main/java/com/codecool/json/location.json");
+        List<Location> locations = objectMapper.readValue(input, new TypeReference<List<Location>>() {});
+        return locations;
     }
     }
 
