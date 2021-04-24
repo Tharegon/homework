@@ -2,6 +2,7 @@ package com.codecool;
 
 import java.util.Properties;
 
+import com.codecool.entity.Location;
 import com.codecool.entity.PlantOrder;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -34,6 +35,7 @@ public class HibernateUtil {
                 configuration.setProperties(settings);
 
                 configuration.addAnnotatedClass(PlantOrder.class);
+                configuration.addAnnotatedClass(Location.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
