@@ -6,6 +6,8 @@ import com.codecool.entity.Location;
 import com.codecool.entity.Marketplace;
 import com.codecool.entity.PlantOrder;
 import com.codecool.entity.Status;
+import com.codecool.pojo.LocationPojo;
+import com.codecool.pojo.PlantOrderPojo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -28,7 +30,7 @@ import java.util.List;
 
 public class RestAPIService {
 
-    public List<PlantOrder> generatePlantOrderPOJO() throws Exception{
+    public List<PlantOrderPojo> generatePlantOrderPOJO() throws Exception{
 
             ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
@@ -49,14 +51,14 @@ public class RestAPIService {
             InputStream input = new FileInputStream("src/main/java/com/codecool/json/order.json");
 
 
-            List<PlantOrder> plantOrder = mapper.readValue(input, new TypeReference<List<PlantOrder>>() {});
+            List<PlantOrderPojo> plantOrder = mapper.readValue(input, new TypeReference<List<PlantOrderPojo>>() {});
             return plantOrder;
     }
 
-    public List<Location> generateLocationPOJO() throws Exception{
+    public List<LocationPojo> generateLocationPOJO() throws Exception{
         ObjectMapper objectMapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         InputStream input = new FileInputStream("src/main/java/com/codecool/json/location.json");
-        List<Location> locations = objectMapper.readValue(input, new TypeReference<List<Location>>() {});
+        List<LocationPojo> locations = objectMapper.readValue(input, new TypeReference<List<LocationPojo>>() {});
         return locations;
     }
 
