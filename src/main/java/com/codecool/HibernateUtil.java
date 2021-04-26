@@ -3,7 +3,10 @@ package com.codecool;
 import java.util.Properties;
 
 import com.codecool.entity.Location;
+import com.codecool.entity.Marketplace;
 import com.codecool.entity.PlantOrder;
+import com.codecool.entity.Status;
+import org.apache.hc.core5.util.Args;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -21,9 +24,9 @@ public class HibernateUtil {
                 // Hibernate settings equivalent to hibernate.cfg.xml's properties
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "org.postgresql.Driver");
-                settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/homework");
-                settings.put(Environment.USER, "david");
-                settings.put(Environment.PASS, "codecool");
+                settings.put(Environment.URL, System.getenv("PSQL_URL"));
+                settings.put(Environment.USER, System.getenv("NAME"));
+                settings.put(Environment.PASS, System.getenv("PSQL_PWD"));
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
 
                 settings.put(Environment.SHOW_SQL, "true");
@@ -36,6 +39,8 @@ public class HibernateUtil {
 
                 configuration.addAnnotatedClass(PlantOrder.class);
                 configuration.addAnnotatedClass(Location.class);
+                configuration.addAnnotatedClass(Status.class);
+                configuration.addAnnotatedClass(Marketplace.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
