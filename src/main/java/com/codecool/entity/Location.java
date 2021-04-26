@@ -6,21 +6,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
-@Table()
+@Table
 @Entity
 public class Location {
 
     @Id
-    private UUID id;
+    private String locationId;
     private String managerName;
     private String phone;
     private String addressPrimary;
@@ -30,7 +28,7 @@ public class Location {
     private String postalCode;
 
 
-    public Location(@JsonProperty("id") UUID id,
+    public Location(@JsonProperty("id") String locationId,
                     @JsonProperty("manager_name") String managerName,
                     @JsonProperty("phone") String phone,
                     @JsonProperty("address_primary") String addressPrimary,
@@ -38,7 +36,7 @@ public class Location {
                     @JsonProperty("country") String country,
                     @JsonProperty("town") String town,
                     @JsonProperty("postal_code") String postalCode) {
-        this.id = id;
+        this.locationId = locationId;
         this.managerName = managerName;
         this.phone = phone;
         this.addressPrimary = addressPrimary;
