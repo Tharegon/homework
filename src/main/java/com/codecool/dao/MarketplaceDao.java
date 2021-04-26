@@ -33,5 +33,11 @@ public class MarketplaceDao {
             return session.createQuery("from Marketplace ", Marketplace.class).list();
         }
     }
+
+    public Marketplace getMarketplaceById(Integer id) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            return session.get(Marketplace.class, id);
+        }
+    }
 }
 
