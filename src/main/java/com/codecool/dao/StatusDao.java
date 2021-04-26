@@ -1,7 +1,6 @@
 package com.codecool.dao;
 
 import com.codecool.HibernateUtil;
-import com.codecool.entity.PlantOrder;
 import com.codecool.entity.Status;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -30,6 +29,12 @@ public class StatusDao {
     public List<Status> getStatus() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.createQuery("from Status ", Status.class).list();
+        }
+    }
+
+    public static Status getStatusById(Integer id) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            return session.get(Status.class, id);
         }
     }
 }
