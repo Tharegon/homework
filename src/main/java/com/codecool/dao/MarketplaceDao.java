@@ -1,9 +1,7 @@
 package com.codecool.dao;
 
-import com.codecool.HibernateUtil;
+import com.codecool.util.HibernateUtil;
 import com.codecool.entity.Marketplace;
-import com.codecool.entity.PlantOrder;
-import com.codecool.entity.Status;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

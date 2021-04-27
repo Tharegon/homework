@@ -1,6 +1,6 @@
 package com.codecool.dao;
 
-import com.codecool.HibernateUtil;
+import com.codecool.util.HibernateUtil;
 import com.codecool.entity.Location;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

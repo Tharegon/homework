@@ -1,4 +1,4 @@
-package com.codecool;
+package com.codecool.service;
 
 
 
@@ -35,7 +35,8 @@ public class RestAPIService {
             ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
             /*
-            HttpGet request = new HttpGet("https://my.api.mockaroo.com/listing?key=63304c70");
+            //this is can be used as a proper way to get the api
+            HttpGet request = new HttpGet( System.getenv("URL"));
 
             CloseableHttpClient client=  HttpClients.createDefault();
             PlantOrder[] response = client.execute(request, httpResponse ->{

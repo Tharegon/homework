@@ -1,6 +1,6 @@
 package com.codecool.dao;
 
-import com.codecool.HibernateUtil;
+import com.codecool.util.HibernateUtil;
 import com.codecool.entity.PlantOrder;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -26,7 +26,7 @@ public class PlantOrderDao {
         }
     }
 
-    public List< PlantOrder > getOrders() {
+        public List< PlantOrder > getOrders() {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             return session.createQuery("from PlantOrder", PlantOrder.class).list();
         }
