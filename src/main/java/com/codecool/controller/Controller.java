@@ -1,7 +1,10 @@
-package com.codecool;
+package com.codecool.controller;
 
-import java.util.Objects;
-import java.util.Scanner;
+import com.codecool.service.DatabaseService;
+import com.codecool.service.RestAPIService;
+import com.codecool.view.View;
+
+import java.util.*;
 
 public class Controller {
 
@@ -15,12 +18,13 @@ public class Controller {
         this.service = service;
     }
 
-    private String readLine(){
+    private String readLine() {
+        System.out.print("Type here ->");
         Scanner myScanner = new Scanner(System.in);
         return myScanner.nextLine();
     }
 
-    public void menu(){
+    public void menu() {
         view.menuTitle();
         try {
             readCommand(readLine());
@@ -30,14 +34,15 @@ public class Controller {
 
     }
 
-    private void readCommand(String command) throws Exception{
-        switch (command){
+    private void readCommand(String command) throws Exception {
+        switch (command) {
             case "report":
                 view.showReports();
-                break;
+                readCommand(readLine());
             case "database":
-                view.printList(service.generatePOJO());
-                break;
+                DatabaseService databaseService = new DatabaseService();
+                databaseService.generateDB(service);
+                readCommand(readLine());
             case "exit":
                 break;
             default:

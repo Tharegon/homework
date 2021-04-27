@@ -1,7 +1,11 @@
 package com.codecool;
 
 
-public class App 
+import com.codecool.controller.Controller;
+import com.codecool.service.RestAPIService;
+import com.codecool.view.View;
+
+public class App
 {
     public static void main( String[] args )
     {
